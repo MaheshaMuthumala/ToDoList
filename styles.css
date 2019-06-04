@@ -1,10 +1,30 @@
 body{
-    padding: 4%;
-    background-image: url("background.png");
+    padding: 0%;
+    height: 100%;
+    background: url("background.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+/*.bg{
+    height: 100%;
+    width: 100%;
+    background-image: url("background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+html {
+    background: url("background.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}*/
 
 h1{
-    font-size: 400%;
+    font-size: 350%;
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
 .list{

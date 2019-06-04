@@ -15,8 +15,10 @@
 
 <div class="container" ng-style="content">
     <form ng-submit="todoAdd()"><table></table>
-        <input type="text" ng-model="todoInput" size="30" placeholder="Add New" >
+        <div class="form-group">
+        <input type="text" ng-model="todoInput" size="100" placeholder="Add New" class="form-control bg-light"><br>
         <input type="submit" value="Add New" class="btn btn-primary">
+        </div>
     </form>
 
     <br>
@@ -55,7 +57,7 @@
             "width" : "100%",
             "align-content" : "center",
             "margin" : "auto",
-            "padding" : "1%",
+            "padding" : "0%",
             "text-align" : "center"
         }
     });
