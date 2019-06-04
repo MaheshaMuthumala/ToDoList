@@ -2,26 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>To Do List</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body ng-app="myApp" ng-controller="todoCtrl">
 
-<h1>My Todo List</h1>
+<h1 ng-style="header">My Todo List</h1>
 
-<div class="container">
+<div class="container" ng-style="content">
     <form ng-submit="todoAdd()">
-        <input type="text" ng-model="todoInput" size="50" placeholder="Add New">
-        <input type="submit" value="Add New">
+        <table class="table">
+            <tr>
+                <td><input type="text" ng-model="todoInput" size="50" placeholder="Add New" class="form-control"></td>
+                <td><input type="submit" value="Add New" class="btn btn-primary"></td>
+            </tr>
+        </table>
     </form>
 
     <br>
 
-    <div ng-repeat="x in todoList">
+    <div ng-repeat="x in todoList" class="list">
         <input type="checkbox" ng-model="x.done"> <span ng-bind="x.todoText"></span>
     </div>
 
-    <p><button ng-click="remove()">Remove marked</button></p>
+    <p><button ng-click="remove()" class="btn btn-danger">Remove marked</button></p>
 </div>
 
 <script>
@@ -41,6 +49,19 @@
                 if (!x.done) $scope.todoList.push(x);
             });
         };
+
+        $scope.header = {
+            "text-align" : "center",
+            "padding" : "1%"
+        }
+
+        $scope.content = {
+            "width" : "50%",
+            "align-content" : "center",
+            "margin" : "auto",
+            "padding" : "2%",
+            "text-align" : "center"
+        }
     });
 </script>
 
