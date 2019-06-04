@@ -4,16 +4,12 @@ body{
 }
 
 h1{
-    font-size: 70px;
+    font-size: 400%;
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
 .list{
     padding: 1%;
     font-size: 115%;
-}
-.table{
-    width: 100%;
-    border-top: none;
 }
 p{
     padding-top: 2%;
