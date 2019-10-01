@@ -39,7 +39,7 @@
             $scope.todoList.push({todoText:$scope.todoInput, done:false});
             $scope.todoInput = "";
         };
-
+        // remove item from the list
         $scope.remove = function() {
             var oldList = $scope.todoList;
             $scope.todoList = [];
